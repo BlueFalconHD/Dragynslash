@@ -16,37 +16,45 @@ Ex:
 #### *Reverse order if Dragyn is moving left*
 
 Commands
+
 `/ command here \`
 `/ > .10.\` (If statement)
 
 Operations
+
 `(dragyn-in <operation> value)`
 `(+ .10.)` Adds 10 to dragyn that passes over operation.
 
 Simulated Values
+
 `.value.`
 `.10.`
 `."Hello World".`
 
 Prints
+
 `[thing to print]`
 `[-]` Prints dragyn that passes over print's value
 `[."I'm a dragyn!".]` Prints "I'm a dragyn!" when dragyn passes over print.
 `[.69.]` Prints '69' to the console when dragyn passes over print.
 
 Sets
+
 `{value}`
 `{.1000.}` Sets dragyn's value who passes over set to 1000.
 
 Unicode Decode
+
 `!unicode number!`
 `!.69.!` Interprets 'E'
 
 Unicode Encode
+
 `% ascii character %`
 `%."E".%` Encodes 'E' to 69
 
 Add 1
+
 `.`
 
 ---
@@ -54,53 +62,69 @@ Add 1
 #### Query statements wait for the user to press enter until continuing the program.
 
 Query Input
+
 `? query message ?`                                  
 `?."What is your name".?` Returns what user inputted.
                                                     
-Query number-only input                                
+Query number-only input          
+
 `$ query message $`                                   
 `$."How old are you?".$` Returns what user inputted.
 
 ---
 
 Comment
+
 `# comment #`
 `# This is the main segment #`
 
 Dragyn's Value
+
 `&val&` Returns dragon's value
 
 
 ## Command Types (see commands)
 
 If
+
 `/ incoming dragyn's value <operation> compare value\`
 Sets incoming dragyn's value to 0 if comparation is false and 1 if comparation is true.
 
 EX:
+
 `:-{.1000.}--/>.10.---[-]`
 Would return 1.
 
 Then
+
 `/|\`
 If value of dragyn is equal to 1, follows the pipe down. If value of dragyn is 0, continues. The pipe in the slashes is skipped and if Dragyn's value = 1, it will move to the tile directly below the pipe.
 
 ## Movement
 
 Horizontal Path
+
 `-` Moves Dragyn along path
 
 Spawn Dragyn
+
 `:` Spawns a Dragyn moving horizontally.
 
 Pipe/Down
+
 `|` Moves Dragyn along downwards at normal speed. 
 
 Direction Change
+
 `>` Turns Dragyn right.
+
 `<` Turns Dragyn left.
+
+
 `^` Turns Dragyn up.
+
 `v` Turns Dragyn down. Not needed at then Command Type
+
 `+` Crossing. Paths don't interact.
 
 ## Examples
